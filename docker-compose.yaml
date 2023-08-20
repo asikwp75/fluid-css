@@ -1,6 +1,0 @@
-version: "3"
-services:
-      web:
-          image: fluid_css
-          ports:
-            - "801:80"
