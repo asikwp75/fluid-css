@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid CSS</title>
+</head>
+
+<style>
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .uk-container {
+        display: flow-root;
+        /* 1 */
+        box-sizing: content-box;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 30px;
+    }
+    .card {
+        width: clamp(14rem, 50%, 43.75rem);
+        margin: 0 auto;
+        padding: clamp(1.5rem, 3vw, 4rem) ;
+        background-color: lightblue;
+        border-radius: 10px;
+    }
+
+    h2 {
+        font-size: clamp(1.4rem, 2.3vw, 4rem);
+        margin: 0;
+    }
+    p {
+        font-size: clamp(0.875rem, 1vw, 1.2rem);
+        margin: clamp(1rem, 1.5vw, 1.5rem) 0 0;
+        line-height: 1.5;
+    }
+    button {
+        font-size: clamp(0.75rem, .9vw, 1.2rem);
+        margin-top: clamp(1rem, 1.5vw, 1.5rem);
+        padding: clamp(0.6rem, .9vw, 1rem) clamp(1.5rem, 2vw, 2rem);
+        border-radius: 3px;
+        color: #000;
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="uk-container">
+        <div class="card">
+            <h2>The font-size of this text varies depending on.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consectetur itaque, voluptatum eveniet cum magnam ipsam qui cupiditate quos illum quas delectus. Perspiciatis labore eaque cum ducimus rerum quo quae?</p>
+            <button>Explore</button>
+            <button>View Details</button>
+        </div>
+    </div>
+</body>
+</html>
